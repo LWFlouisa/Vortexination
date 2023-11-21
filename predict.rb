@@ -22,7 +22,7 @@ class Brain
 <rss version='2.0'>
 
 <channel>
-  <title>Personal Blog</title>
+  <title>Vortexination Updates</title>
   <link>http://localhost:4000/_feed/feed.xml</link>
   <description>Local Feed for Vortexination.</description>
 </channel>
