@@ -21,13 +21,6 @@ Each vortex is part of a larger grid network.
             \ /       \ /
              +         +
              5         4 
-
-1 Cluster A
-2 Cluster B
-4 Cluster C
-8 Cluster D
-7 Cluster E
-5 Cluster F
 ~~~
 
 ## Pseudocode
