@@ -25,7 +25,22 @@ class Brain
 
     ## Formatting of XML document
     open("_feed/feed.xml", "w") { |f|
-      f.puts "
+      f.puts "<?xml version='1.0' encoding='UTF-8' ?>
+<rss version='2.0'>
+
+<channel>
+  <title>Personal Blog</title>
+  <link>http://localhost:4000/feed.xml</link>
+  <description>Local Feed for Vortexination.</description>
+</channel>
+
+<item>
+<title>Output</title>
+<link>http://localhost:4000/_feed/.txt</link>
+<description><![CDATA[#{aspi_description}]]></description>
+</item>
+
+</rss>
       "
     }
     
