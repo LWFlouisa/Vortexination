@@ -6,15 +6,8 @@ class Brain
   def initialize
     @state = off
   end
-  
-  def on_behaviours
-    Vortex::Machine.node1; sleep(1)
-    Vortex::Machine.node2; sleep(1)
-    Vortex::Machine.node4; sleep(1)
-    Vortex::Machine.node8; sleep(1)
-    Vortex::Machine.node7; sleep(1)
-    Vortex::Machine.node5; sleep(1)
 
+  def create_feed
     # Write results of experiment to an XML file.
     node1_section = File.read("Vortexination/Node1/_imaginedpath/outcomes/nuetral_outcome.txt")
     node2_section = File.read("Vortexination/Node2/_imaginedpath/outcomes/nuetral_outcome.txt")
@@ -30,19 +23,36 @@ class Brain
 
 <channel>
   <title>Personal Blog</title>
-  <link>http://localhost:4000/feed.xml</link>
+  <link>http://localhost:4000/_feed/feed.xml</link>
   <description>Local Feed for Vortexination.</description>
 </channel>
 
 <item>
 <title>Output</title>
-<link>http://localhost:4000/_feed/.txt</link>
-<description><![CDATA[#{aspi_description}]]></description>
+<link>http://localhost:4000/_feed/feed.xml</link>
+<description><![CDATA[
+#{node1_section}
+#{node2_section}
+#{node4_section}
+#{node8_section}
+#{node7_section}
+#{node5_section}
+]]></description>
 </item>
 
-</rss>
-      "
+</rss>"
     }
+  end
+  
+  def on_behaviours
+    Vortex::Machine.node1; sleep(1)
+    Vortex::Machine.node2; sleep(1)
+    Vortex::Machine.node4; sleep(1)
+    Vortex::Machine.node8; sleep(1)
+    Vortex::Machine.node7; sleep(1)
+    Vortex::Machine.node5; sleep(1)
+
+    create_feed
     
     state = "off"
   end
