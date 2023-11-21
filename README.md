@@ -1,6 +1,16 @@
 # Vortex Cluster
 Each vortex is part of a larger grid network.
 
+For an example of how one node handles data:
+
+~~~
+    0   1
+0 0,0 0,1
+1 1,0 1,1
+~~~
+
+It makes a prediction based on two coordinate values. The trouble was findind a way to make that work for 6 independant nodes.
+
 ~~~
        8                     1
        +                     +
