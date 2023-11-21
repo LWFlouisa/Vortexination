@@ -39,3 +39,6 @@ class Brain
     end
   end
 end
+
+## Transition state with self abortion.
+Brain.transition
