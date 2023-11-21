@@ -9,6 +9,11 @@ For an example of how one node handles data:
 1 1,0 1,1
 ~~~
 
+[ Charlotte dies ][ doesn't dated player ]
+[ Charlotte lives ][ doesn't dated player ]
+[ Charlotte dies ][ dated player ]
+[ Charlotte lives ][ dated player ]
+
 It makes a prediction based on two coordinate values. The trouble was findind a way to make that work for 6 independant nodes.
 
 ~~~
