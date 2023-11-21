@@ -13,7 +13,7 @@ Each vortex is part of a larger grid network.
     \         \       /         /
      \         \     /         /
       \         \   /         /
-       \         \ /         X
+       \         \ /         /
         \         X         /
          \       / \       /
           \     /   \     /
